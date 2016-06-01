@@ -1,0 +1,21 @@
+.top-head-full{
+    background:$blue-dark;
+}
+.top-head{
+    ul{
+        display:inline-block;
+        float:right;
+        li{
+            display:inline-block;
+            margin-left:5px;
+
+
+        }
+    }
+    img{
+        display:inline-block;
+    }
+    .gounteur{
+        background:$blanc;
+    }
+}

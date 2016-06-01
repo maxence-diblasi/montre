@@ -1,0 +1,58 @@
+.about-full{
+    padding-top:150px;
+    padding-bottom:200px;
+    .about-contner{
+        .titre-h3{
+            padding-bottom:80px;
+          .lineh3{
+              height:1px;
+              background:$or;
+              display: block;
+              vertical-align: baseline;
+              width:100%;
+              margin-top: 20px;
+          }
+          h3{
+              color:$blue-dark;
+              font-family:$lato;
+              font-weight:700;
+              text-transform: uppercase;
+              letter-spacing:10px;
+              width:100%;
+              display: block;
+              vertical-align: baseline;
+          }
+        }
+
+        #ticket-contner{
+            position:relative;
+            .img-contner{
+                padding:0;
+            }
+            .text-contner{
+                background:$blue-dark;
+                position:relative;
+                padding:50px;
+                .logo-1{
+                    margin-top:40px;
+                    margin-bottom:20px;
+                }
+                p{
+                    font-family:$lato;
+                    color:$blanc;
+                }
+                .about-montre{
+                    position:absolute;
+                    bottom:-180px;
+                    right:-20px;
+                }
+            }
+        }
+    .ombre{
+        width:100%;
+        height:auto;
+        margin:0 auto;
+        margin-top:-20px;
+    }
+    }
+}
