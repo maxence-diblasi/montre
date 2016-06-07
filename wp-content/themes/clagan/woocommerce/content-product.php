@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $product, $woocommerce_loop;
+global $product, $woocommerce_loop, $post;
 
 // Store loop count we're currently on
 if ( empty( $woocommerce_loop['loop'] ) ) {
@@ -64,7 +64,16 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 * @hooked woocommerce_show_product_loop_sale_flash - 10
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
+	//do_action( 'woocommerce_before_shop_loop_item_title' );
+
+
+	if ( has_post_thumbnail() ) {
+		echo get_the_post_thumbnail( $post->ID, $size );
+	} elseif ( wc_placeholder_img_src() ) {
+		echo wc_placeholder_img( $size );
+	}
+
+	echo $product->get_categories();
 
 	/**
 	 * woocommerce_shop_loop_item_title hook.
@@ -88,6 +97,7 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
+
 	?>
 
 </li>

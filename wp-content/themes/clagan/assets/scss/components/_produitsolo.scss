@@ -1,94 +1,137 @@
-.full-watches{
-    h4{
-        font-family:$lato;
-        font-size:20px;
-        color:blue;
-        text-transform:uppercase;
-    }
-    .entry-summary{
-        a:first-of-type{
-            font-family:$lato;
-            font-weight:700;
-            font-size:22px;
-            letter-spacing:4px;
-            color:$blue-dark;
-            text-transform:uppercase;
-            text-decoration:none;
+ .full-watches{
+     .woocommerce-message{
+         font-family:$lato;
+         font-size:16px;
+         font-weight:400;
+         color:$vert;
+         background:rgba(143, 174 ,27, 0.2);
+         border-top:0px;
+         .wc-forward{
+             margin: 0 auto;
+             margin-left:20px;
+             border-radius:0;
+             background:rgba(143, 174 ,27, 0);
+             border:2px solid  $vert;
+             font-family: $lato;
+             font-size: 16px;
+             font-weight:700;
+             color:$vert;
+             text-transform:uppercase;
+             display: inline-block;
+             vertical-align: middle;
+             &:hover{
+                 background:$vert;
+                 color:$blanc;
+             }
+         }
+     }
+     .woocommerce-error{
+         font-family:$lato;
+         font-size:16px;
+         font-weight:400;
+         color:$rouge;
+         background:rgba(213, 43 ,30, 0.2);
+         border-top:0px;
 
-        }
-    }
-    .contner-caracteristique{
-        table{
-            tbody{
-                height:30px !important;
-                padding:none;
-                p{
-                    text-align: left;
-                    padding-left:100px;
-                    color:green;
-                }
-                .data{
-                    color:red;
-                    text-align: right;
-                }
-
-            }
-
-        }
-
-    }
-
+     }
 
     .product{
-
         .images{
-
         }
         .entry-summary{
+          .reassurance{
+            margin-bottom:40px;
+            margin-left:0px;
+              .assurance-1{
+                float:left;
+                width:150px;
+                margin-right:10px!important;
+                background:$blanc;
+                border:solid 2px $gris;
+                img{
+                  margin-left:5px;
+                  margin-right:5px;
+                  margin-top:10px;
+                  margin-bottom:10px;
+                  display:inline-block;
+                }
+                p{
+                  display:inline-block;
+                  font-size:10px;
+                }
+              }
+              .assurance-2{
+                float:left;
+                width:150px;
+                background:$blanc;
+                border:solid 2px $gris;
+                img{
+                  margin-left:5px;
+                  margin-right:5px;
+                  margin-top:10px;
+                  margin-bottom:10px;
+                  display:inline-block;
 
-            h1{
-                font-family:$lato;
-                font-size:24px;
-                font-weight:700;
-                color:$blue-dark;
-                padding-top:5px;
-                padding-bottom:10px;
-                border-bottom: solid 1px #eeeeee;
-            }
+                }
+                p{
+                  display:inline-block;
+                  font-size:10px;
+                }
+              }
+          }
+
+          a:first-of-type{
+              font-family:$lato;
+              font-weight:700;
+              font-size:30px;
+              letter-spacing:4px;
+              color:$blue-dark;
+              text-transform:uppercase;
+              text-decoration:none;
+              pointer-events: none;
+              cursor: default;
+          }
+          h1{
+              font-family:$lato;
+              font-size:24px;
+              font-weight:400;
+              color:$blue-dark;
+              padding-top:5px;
+              padding-bottom:20px;
+              border-bottom: solid 1px #eeeeee;
+          }
+          h2{
+            font-family:$lato;
+            font-size:16px;
+            font-weight:700;
+            color:$blue-dark;
+            text-transform:uppercase;
+            margin-bottom:15px;
+          }
+
             .amount{
+                display:block;
                 font-family:$lato;
                 font-size:30px;
                 font-weight:700;
                 color:$blue-dark;
+                margin-top:30px;
+                margin-bottom:30px;
             }
             .input-text{
                 height:45px;
             }
-            /*.button{
-                background:$blanc !important;
-                border: solid 2px $blue-dark;
-                height:45px;
-                font-family:$lato;
-                text-transform:uppercase;
-                border-radius:0;
-                transition:0.4s ease all;
-                &:hover{
-                    background:$blanc !important;
-                    color:$blue-dark;
-
-                }
-            }*/
             .button {
                 height:45px;
                 margin: 0 auto;
-                margin-left:20px; 
+                margin-left:20px;
                 border-radius:0;
-                background:$blanc;
-                border:2px solid  $gris-dark;
+                background:$blue-dark;
+                border:2px solid  $blue-dark;
                 font-family: $lato;
                 font-size: 16px;
                 font-weight:700;
-                color:$gris-dark;
+                color:$blanc;
                 text-transform:uppercase;
                 display: inline-block;
                 vertical-align: middle;
@@ -105,7 +148,6 @@
                   transition-duration: 0.3s;
             }
             .button:before {
-
               content: "";
               position: absolute;
               z-index: -1;
@@ -113,7 +155,7 @@
               left: 0;
               right: 0;
               bottom: 0;
-              background: $gris-dark;
+              background: $blanc;
               -webkit-transform: scaleX(0);
               transform: scaleX(0);
               -webkit-transform-origin: 0 50%;
@@ -126,19 +168,83 @@
               transition-timing-function: ease-out;
             }
             .button:hover, .button:focus, .button:active {
-              color: white;
-              background:$blanc;
+              color: $blue-dark;
+              background:$blue-dark;
             }
             .button:hover:before, .button:focus:before, .button:active:before {
               -webkit-transform: scaleX(1);
               transform: scaleX(1);
             }
+            .contner-caracteristique{
+              .first-table{
+                padding:0px;
+                margin:0;
+                border:0;
+                tbody{
+                  padding:0px;
+                  background:$blanc;
+                  tr{
+                    margin:0;
+                    padding:0px !important;
+                    th{
+                      width:150px;
+                      height:42px;
+                      line-height:42px;
+                      padding:0px!important;
+                      p{
+                        margin-bottom:0;
+                        vertical-align:middle;
+                      }
+                    }
+                    td{
+                      padding:0px!important;
+                      .data{
+                        margin-bottom:0;
+                        font-style:italic;
+                      }
+                    }
+                  }
+                }
+              }
+              .shop_attributes{
+                padding:0px;
+                background:pink;
+                border:none;
+                tr{
+                  background:$blanc!important;
+                  border: solid 2px #eeeeee;
 
+                  th{
+                    background:none;
+                    border:none;
 
+                    p{
+                      background:none;
 
+                    }
+                  }
+                  td{
+                    background:none;
+                    border:none;
+
+                    p{
+
+                    }
+                  }
+                }
+              }
+            }
         }
-        .woocommerce-tabs{
-
+        .related{
+            margin-top:30px;
+            h2{
+                font-family:$lato;
+                font-size:20px;
+                font-weight:700;
+                color:$blue-dark;
+                text-transform:uppercase;
+                margin-bottom:15px;
+            }
         }
     }
 }

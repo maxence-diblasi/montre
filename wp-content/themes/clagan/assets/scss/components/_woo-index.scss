@@ -25,7 +25,17 @@
 
   }
 }
+.product{
+    overflow: hidden;
+}
+.wp-post-image{
+    transition: 0.4s ease all;
+    overflow: hidden;
+    &:hover{
+        transition: 0.4s ease all;
 
+    }
+}
 .contner-lesmarques{
     background:url(../images/lac-alsace.png);
     .les_marques{

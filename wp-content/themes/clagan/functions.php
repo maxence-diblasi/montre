@@ -74,7 +74,11 @@ define('_URL_IMAGES', get_stylesheet_directory_uri().'/assets/images/');
 */
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
 //remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
-add_action('woocommerce_single_product_summary', 'woocommerce_product_description_tab', 11);
+
+
+
+
+
 
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 
@@ -85,12 +89,58 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_me
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
 
 
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 10);
+
+// Suppression table description et avis
+
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+
+
+// define the woocommerce_after_shop_loop_item callback
+function action_woocommerce_after_shop_loop_item2( ) {
+    ?><a href="<?php the_permalink(); ?>" class="hvr-sweep-to-right" style="position:relative;z-index:3;">Découvrir</a><?php
+};
+
+// add the action
+add_action( 'woocommerce_after_shop_loop_item', 'action_woocommerce_after_shop_loop_item2');
 
 
 
 
 
 
+
+function textdomain_register_sidebars() {
+
+
+    register_sidebar(
+    array(
+    	'id' => 'sidebar-2',
+    	'name' => __( 'filtres-montre', 'textdomain' ),
+    	'description' => __( 'Filtres montre', 'textdomain' ),
+    	'before_widget' => '<div id="%1$s" class="widget %2$s small-12 medium-3 columns end">',
+    	'after_widget' => '</div>',
+    	'before_title' => '<h3 class="widget-title">',
+    	'after_title' => '</h3>'
+    )
+);
+
+
+  register_sidebar(
+  array(
+    'id' => 'sidebar-1',
+    'name' => __( 'recherche-header', 'textdomain' ),
+    'description' => __( 'Filtres woocommerces', 'textdomain' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s small-12 medium-12 columns end">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  )
+);
+}
+add_action( 'widgets_init', 'textdomain_register_sidebars' );
 
 function my_title($title, $idarticle) {
     if(get_post_format($idarticle) == "video")

@@ -1,0 +1,61 @@
+
+
+.titre-h3-montre{
+    padding-top:200px;
+    padding-bottom:80px;
+
+  .lineh3{
+      height:1px;
+      background:$or;
+      display: block;
+      vertical-align: baseline;
+      width:100%;
+      margin-top: 20px;
+  }
+  h3{
+      color:$blue-dark;
+      font-family:$lato;
+      font-weight:700;
+      text-transform: uppercase;
+      letter-spacing:10px;
+      width:100%;
+      display: block;
+      vertical-align: baseline;
+  }
+}
+.titre-filtre{
+    h2{
+        font-family:$lato;
+        font-size:14px;
+        font-weight:700;
+        color:$blue-dark;
+        letter-spacing: 1px;
+
+    }
+
+
+}
+#filtre-montres{
+    background:$gris;
+    height:auto !important;
+    padding-top:30px;
+    padding-bottom:30px;
+    .filtres-produits{
+        select {
+            margin-bottom:0;
+
+        }
+        .dropdown_layered_nav_hf{
+            padding-bottom:0px;
+        }
+        .widget-title{
+            display:none;
+            padding-bottom:0px;
+        }
+
+    }
+}
+select.dropdown_layered_nav_hf {
+    margin-bottom:0;
+    padding-top:0 ;
+}

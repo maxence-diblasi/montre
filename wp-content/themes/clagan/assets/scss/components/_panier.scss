@@ -1,0 +1,56 @@
+.status-publish{
+
+    .entry-content{
+        .woocommerce{
+            .woocommerce-error{
+                font-family:$lato;
+                font-size:16px;
+                font-weight:400;
+                color:$rouge;
+                background:rgba(213, 43 ,30, 0.2);
+                border-top:0px;
+            }
+            form{
+                border-radius: none;
+                table{
+                    thead{
+                        background:$blue-dark;
+                        color:$blanc;
+
+                    }
+                    tbody{
+                        .cart_item{
+                            background:$blanc!important;
+                            .product-name{
+                                a{
+                                    font-family:$lato !important;
+                                    color:$or-dark;
+                                    transition: 0.4s;
+                                    &:hover{
+                                        color:$or;
+                                    }
+
+                                }
+                            }
+                        }
+                        tr{
+                            .coupon{
+                                .button{
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+#page .main-content{
+    padding-top:100px;
+    width: 100% !important;
+}

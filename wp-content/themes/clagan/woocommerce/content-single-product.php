@@ -61,19 +61,38 @@ global $product;
 			 * @hooked woocommerce_template_single_add_to_cart - 30
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked woocommerce_product_description_tab - 50
+			 * @hooked woocommerce_product_description_tab - 60
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 			//comments_template();
+
+			remove_action('woocommerce_single_product_summary', 'woocommerce_product_description_tab', 60);
+
 		?>
+
+		<div class="reassurance row">
+			<div class="assurance assurance-1">
+				<img src="<?= _URL_IMAGES; ?>../images/authenticity.png" alt="" />
+				<p>produit authentique</p>
+			</div>
+
+			<div class="assurance assurance-2">
+				<img src="<?= _URL_IMAGES; ?>../images/authenticity2.png" alt="" />
+				<p>paiement sécurisé</p>
+			</div>
+		</div>
+
+		<?php woocommerce_product_description_tab(); ?>
+
+
 		<div class="caracteristique row">
 			<div class="small-12 columns contner-caracteristique">
-				<h4>Caractéristique</h4>
+				<h2>Caractéristique</h2>
 				 <?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
-					 <table>
+					 <table class="first-table">
 					<tr>
 						<th>
-							<p>Rèf :</p>
+							<p>Rèf</p>
 						</th>
 						<td>
 							<p class="data"><?= $product->get_sku(); ?></p>
@@ -85,10 +104,10 @@ global $product;
 			<?php $annee = get_field('annee', $product->id);
 					if (!is_null($annee) && ($annee != "") ):
 			?>
-				<table>
+				<table class="first-table">
 				<tr>
 					<th>
-						<p>Année :</p>
+						<p>Année</p>
 					</th>
 					<td>
 						<p class="data"><?= $annee; ?></p>
@@ -99,10 +118,10 @@ global $product;
 			<?php $dimensions = get_field('dimensions', $product->id);
 					if (!is_null($dimensions) && ($dimensions != "") ):
 			?>
-				<table>
+				<table class="first-table">
 				<tr>
 					<th>
-						<p>Dimensions :</p>
+						<p>Dimensions</p>
 					</th>
 					<td>
 						<p class="data"><?= $dimensions; ?></p>

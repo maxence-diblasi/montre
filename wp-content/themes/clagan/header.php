@@ -18,7 +18,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Lato:700,300,400' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/components/owl.carousel/dist/assets/owl.carousel.min.css" media="screen" title="no title" charset="utf-8">
-		
+
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
@@ -31,39 +31,58 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="top-head-full">
-			<div class="top-head row">
-				<img src="<?= _URL_IMAGES; ?>../images/logo.png" alt="logo" class="logo" />
-				<ul>
-					<li><a href="#"><img src="<?= _URL_IMAGES; ?>../images/user.png" alt="user" class="user" /></a></li>
-					<li><a href="#"><img src="<?= _URL_IMAGES; ?>../images/panier.png" alt="panier" class="panier" /></a></li>
-					<li><a href="#"><img src="<?= _URL_IMAGES; ?>../images/fb.png" alt="fb" class="fb" /></a></li>
-					<li><a href="#"><img src="<?= _URL_IMAGES; ?>../images/pinterest.png" alt="pinterest" class="pinterest" /></a></li>
-				</ul>
+	<header id="site-head" class="site-header" role="banner">
+		<section class="header-clagan desktop">
+			<div class="container-logo  small-6 medium-6 large-2 columns ">
+					<img src="<?= _URL_IMAGES; ?>../images/logo.png" alt="logo" class="logo" />
 			</div>
-		</div>
-
-		<div class="title-bar" data-responsive-toggle="site-navigation">
-			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
-			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			<div class="container-menu small-6 medium-6 large-8 columns">
+				<?php wp_nav_menu( array( 'theme_location' => 'top-bar-r' ) ); ?>
 			</div>
-		</div>
-		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-				</ul>
-			</div>
-			<div class="gounteur">
-				<div class="top-bar-section row">
-					<?php wp_nav_menu( array( 'theme_location' => 'top-bar-r' ) ); ?>
+			<div class="container-compte small-12 medium-12 large-2 columns">
+				<div class="container-cart">
+					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/contact.png" alt="contact-clagan" class="contact-clagan" /></a>
 				</div>
-
+				<div class="container-user">
+					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/user-clagan.png" alt="user-clagan" class="user-clagan" /></a>
+				</div>
+				<div class="container-cart">
+					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/cart-clagan.png" alt="cart-clagan" class="cart-clagan" /></a>
+					<span>
+						<?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="header-clagan mobile">
+			<div class="container-logo  small-6 columns ">
+					<img src="<?= _URL_IMAGES; ?>../images/logo.png" alt="logo" class="logo" />
 			</div>
 
-		</nav>
+			<div class="container-compte small-6 columns">
+				<div class="container-cart">
+					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/contact.png" alt="contact-clagan" class="contact-clagan" /></a>
+				</div>
+				<div class="container-user">
+					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/user-clagan.png" alt="user-clagan" class="user-clagan" /></a>
+				</div>
+				<div class="container-cart">
+					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/cart-clagan.png" alt="cart-clagan" class="cart-clagan" /></a>
+					<span>
+						<?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
+					</span>
+				</div>
+			</div>
+			<div class="contner-menu small-12 columns">
+				<?php wp_nav_menu( array( 'theme_location' => 'top-bar-r' ) ); ?>
+			</div>
+		</section>
+		<section class="container-search small-12 columns">
+			<div class="row">
+				<?php dynamic_sidebar( 'recherche-header' ); ?>
+			</div>
+		</section>
+
 	</header>
 
 

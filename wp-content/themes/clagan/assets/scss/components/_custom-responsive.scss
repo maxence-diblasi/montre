@@ -1,0 +1,26 @@
+.desktop{
+  display:block;
+}
+.mobile{
+  display:none;
+}
+@media screen and (max-width:1024px){
+  .desktop{
+    display:none;
+  }
+  .mobile{
+    display:block;
+    .container-menu{
+      #mega-menu-wrap-top-bar-r{
+        width:100% !important;
+        li{
+          top:200px;
+        }
+      }
+
+    }
+  }
+}
+.woocommerce-result-count{
+    
+}

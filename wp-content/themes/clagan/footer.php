@@ -16,15 +16,15 @@
 				<section id="assurance" class="row">
 					<article class="assurance-1 small-12 medium-4 columns">
 						<div class="align-content">
-							<img src="<?= _URL_IMAGES; ?>../images/delivery.png" alt="" />
+							<img src="<?= _URL_IMAGES; ?>../images/livraison.png" alt="" />
 							<p>
-								livraison et retour rapide sous 24 heures
+								Livraison et retour rapide sous 24 heures
 							</p>
 						</div>
 					</article>
 					<article class="assurance-2 small-12 medium-4 columns">
 						<div class="align-content">
-							<img src="<?= _URL_IMAGES; ?>../images/certify.png" alt="" />
+							<img src="<?= _URL_IMAGES; ?>../images/authentique.png" alt="" />
 							<p>
 								Authenticité et tracabilité des produits garantis
 							</p>
@@ -32,7 +32,7 @@
 					</article>
 					<article class="assurance-3 small-12 medium-4 columns">
 						<div class="align-content">
-							<img src="<?= _URL_IMAGES; ?>../images/certify.png" alt="" />
+							<img src="<?= _URL_IMAGES; ?>../images/secure.png" alt="" />
 							<p>
 								Paiement sécurisé via paypal, visa et mastercard
 							</p>
@@ -45,28 +45,28 @@
 					<div class="row" id="foot">
 						<article class="foot-1 small-12 medium-3 columns">
 							<h6>informations</h6>
-							<p>À propos de nous</p>
-							<p>Contactez-nous</p>
-							<p>Confidentialité</p>
-							<p>Plan du site</p>
-							<p>Crédits</p>
+							<a href="#">À propos de nous</a>
+							<a href="#">Contactez-nous</a>
+							<a href="#">Confidentialité</a>
+							<a href="#">Plan du site</a>
+							<a href="#">Crédits</a>
 						</article>
 						<article class="foot-2 small-12 medium-3 columns">
 							<h6>Aide & assistance</h6>
-							<p>Mentions légales</p>
-							<p>Livraisons et retours</p>
-							<p>CGV</p>
+							<a href="#">Mentions légales</a>
+							<a href="#">Livraisons et retours</a>
+							<a href="#">CGV</a>
 						</article>
 						<article class="foot-3 small-12 medium-3 columns">
-							<h6>suiver nous</h6>
-							<p>Facebook</p>
-							<p>Tweeter</p>
-							<p>Google plus</p>
+							<h6>suivez-nous</h6>
+							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Tweeter</a>
+							<a href="#"><i class="fa fa-google" aria-hidden="true"></i>Google plus</a>
 						</article>
 						<article class="foot-4 small-12 medium-3 columns">
 							<h6>newsletter</h6>
 							<form class="newsletter" action="#" method="post">
-								<input type="email" class="mail" name="email" value="votre email">
+								<input type="email" class="mail" name="email" value="votre email...">
 								<input type="submit" class="envois" name="submit" value=">">
 							</form>
 						</article>
@@ -101,7 +101,11 @@ $('.topmontre').hover(function(){
 }, function(){
 	$(this).find('.img-mini').css('transform', 'scale(1)')
 })
-
+$('.products > li').hover(function(){
+	$(this).find('.wp-post-image').css('transform', 'scale(1.1)');
+}, function(){
+	$(this).find('.wp-post-image').css('transform', 'scale(1)')
+})
 $('.entry-title').before($('.posted_in a'))
 $('.posted_in').remove()
 </script>
@@ -110,17 +114,8 @@ $('.owl-carousel').owlCarousel({
 loop:true,
 items:1,
 nav:false,
-/*responsive:{
-	0:{
-		items:1
-	},
-	600:{
-		items:3
-	},
-	1000:{
-		items:5
-	}
-}*/
+autoplay:true,
+autoplayTimeout: 7000,
 })
 </script>
 <?php wp_footer(); ?>

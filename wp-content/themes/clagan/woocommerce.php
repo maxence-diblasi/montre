@@ -7,12 +7,39 @@
  */
 get_header(); ?>
 
-<div class="small-12 large-12 columns ariane">
+
+<div class="row titre-h3-montre">
+	<div class="small-4 columns">
+		<span class="lineh3"></span>
+	</div>
+	<div class="small-4 columns">
+		<h3 class="text-center">montres</h3>
+	</div>
+	<div class="small-4 columns">
+		<span class="lineh3"></span>
+	</div>
+</div>
+<div class="row titre-filtre">
+	<div class="columns small-12 text-left">
+		<h2>Filtrer votre recherche</h2>
+	</div>
+</div>
+<div id="filtre-montres">
+	<?php if(is_product_category() && !is_product_category('nouveaute') && !is_product_category('bracelet')){ ?>
+	<div class="row filtres-produits">
+
+		<?php dynamic_sidebar( 'filtres-montre' ); ?>
+
+	</div>
+	<?php }?>
+</div>
+<div class="small-12 large-12 row ariane">
 		<?php woocommerce_breadcrumb(); ?>
 </div>
-<div class="row">
 
+<div class="row">
 	<div class="small-12 large-12 columns full-watches" role="main">
+
 	<?php do_action( 'foundationpress_before_content' ); ?>
 	<?php while ( woocommerce_content() ) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">

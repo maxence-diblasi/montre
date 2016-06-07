@@ -51,11 +51,17 @@ $lato: 'Lato', sans-serif;
 
 $blue-dark: #040313;
 $or: #d5b789;
+$or-dark: #ba9e75;
 $blanc: #FFFFFF;
 $noir:#000000;
 $gris: #EEEEEE;
 $gris-dark: #212121;
 $gris-medium: #c7c7c7;
+$twitter: #1da1f2;
+$google:  #ea4335;
+$facebook: #3b5998;
+$vert: #8fae1b;
+$rouge: #c1180b;
 
 // 1. Global
 // ---------
@@ -100,7 +106,7 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------

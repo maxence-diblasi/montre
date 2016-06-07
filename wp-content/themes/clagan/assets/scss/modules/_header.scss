@@ -1,21 +1,94 @@
-.top-head-full{
-    background:$blue-dark;
-}
-.top-head{
-    ul{
-        display:inline-block;
-        float:right;
-        li{
-            display:inline-block;
-            margin-left:5px;
+header{
+  background:$blue-dark;
 
 
+  .header-clagan{
+
+    #mega-menu-top-bar-r{
+    width: 100% !important;
+      li{
+
+        a{
+            font-family: $lato !important;
+            font-size:13px!important;
+            font-weight:700 !important;
+            letter-spacing: 3px !important;
+            text-transform: uppercase!important;
         }
+      }
     }
-    img{
+    #mega-menu-wrap-top-bar-r .mega-menu-toggle #mega-toggle-block-1:after{
+      content:"";
+
+    }
+
+
+
+    .container-logo{
+      height:70px;
+      background:$blue-dark;
+      display:flex;
+      align-items: center;
+      .logo{
+          width:132px;
+          height:24px;
+      }
+    }
+    .container-menu{
+      height:70px;
+      background:$blue-dark;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container-compte{
+      height:70px;
+      background:$blue-dark;
+      display:flex;
+      align-items: center;
+      justify-content: flex-end;
+      .container-cart{
         display:inline-block;
+        margin-left:20px;
+        position:relative;
+        span{
+          position:absolute;
+          height:20px;
+          width:20px;
+          background:$blanc;
+          border-radius:20px;
+          margin:0 auto;
+          text-align:center;
+          line-height:20px;
+          top:-8px;
+          right:-8px;
+          font-family:$lato;
+        }
+      }
+      .container-user{
+        display:inline-block;
+        margin-left:15px;
+      }
     }
-    .gounteur{
-        background:$blanc;
+
+  }
+  .container-search{
+    background:$blanc;
+    border-bottom:solid 2px $or;
+
+    .woocommerce-product-search{
+      position:relative;
+      input[type="submit"]{
+        position:absolute;
+        top:1px;
+        right:0px;
+      }
+      #woocommerce-product-search-field{
+        margin:0px !important;
+      }
+      .screen-reader-text{
+        display:none;
+      }
     }
+  }
 }

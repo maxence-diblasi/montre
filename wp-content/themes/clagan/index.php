@@ -67,30 +67,38 @@ get_header(); ?>
 
 		?>
 
-        <?php
-            $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'meta_key' => 'total_sales', 'orderby' => 'meta_value_num' );
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
-
-			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail_size' );
-			$url = $thumb['0']; ?>
-
-			<div class="small-12 medium-6 large-4 columns end animated fadeIn topmontre">
-			    <a href="<?php the_permalink() ?>" class="clickproduit"></a>
-                <div class="overflowed">
-                    <div class="watches-img img-mini" style="background-image:url(<?php echo $thumb['0'] ?>)">
-                </div>
-                </div>
-                <span>
-                    <h5 class="text-center"><?php echo $product->get_categories(); ?></h5>
-                    <h6 class="text-center"><?php the_title(); ?></h6>
-                    <span class="separateur"></span>
-                    <a href="<?php the_permalink(); ?>" class="hvr-sweep-to-right" style="position:relative;z-index:3;">Découvrir</a>
-                </span>
-			</div>
-
-        <?php endwhile; ?>
-        <?php wp_reset_query(); ?>
+		<?php
+					$args = array(
+					'post_type' => 'product',
+					'stock' => 1,
+					'posts_per_page' => 3,
+					'meta_key' => 'total_sales',
+					'orderby' => 'meta_value_num',
+					);
+					$loop = new WP_Query( $args );
+					if ( $loop->have_posts() ) {
+					while ( $loop->have_posts() ) : $loop->the_post();
+					?><div class="small-12 medium-6 large-4 columns end animated fadeIn topmontre">
+					    <a href="<?php the_permalink() ?>" class="clickproduit"></a>
+		                <div class="overflowed">
+		                    <div class="watches-img img-mini" style="background-image:url(<?php echo $thumb['0'] ?>)">
+								<?php the_post_thumbnail(); ?>
+		                </div>
+		                </div>
+		                <span>
+		                    <h5 class="text-center"><?php echo $product->get_categories(); ?></h5>
+		                    <h6 class="text-center"><?php the_title(); ?></h6>
+		                    <span class="separateur"></span>
+		                    <a href="<?php the_permalink(); ?>" class="hvr-sweep-to-right" style="position:relative;z-index:3;">Découvrir</a>
+		                </span>
+					</div>
+ 				<?php
+					endwhile;
+					} else {
+					echo __( 'No products found' );
+					}
+					wp_reset_query();
+				?>
 
 	</div>
 </div>

@@ -1,0 +1,72 @@
+#full-assurance{
+	background:$or;
+	padding-top:50px;
+	padding-bottom:50px;
+	#assurance{
+		.align-content{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			p{
+				margin:0;
+				font-family:$lato;
+				font-weight:400;
+				color:$noir;
+				display:inline-block;
+				text-align:left;
+			}
+			img{
+			}
+			.assurance-1{
+				padding-top:20px;
+				padding-bottom:20px;
+			}
+		}
+
+	}
+}
+#full-footer{
+	background:$blue-dark;
+	padding-top:50px;
+	padding-bottom:50px;
+	#foot{
+		h6{
+			font-family:$lato;
+			font-weight:700;
+			letter-spacing:4px;
+			text-transform:uppercase;
+			color:white;
+			margin-bottom:30px;
+		}
+		p{
+			font-family: $lato;
+			color:white;
+			transition: all .2s ease-in-out;
+			&:hover{
+				margin-left:10px;
+			}
+		}
+
+		.newsletter{
+			position:relative;
+			border:none;
+			.email{
+				height:35px;
+				background:white;
+			}
+			.envois{
+				position:absolute;
+				background:$or;
+				color:$blanc;
+				width:39px;
+				height:39px;
+				border:none;
+				margin:0 auto;
+				top:0px;
+				right:0px;
+
+			}
+		}
+
+	}
+}
