@@ -41,13 +41,13 @@
 			</div>
 			<div class="container-compte small-12 medium-12 large-2 columns">
 				<div class="container-cart">
-					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/contact.png" alt="contact-clagan" class="contact-clagan" /></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>montre/contact/"><img src="<?= _URL_IMAGES; ?>../images/contact.png" alt="contact-clagan" class="contact-clagan" /></a>
 				</div>
 				<div class="container-user">
-					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/user-clagan.png" alt="user-clagan" class="user-clagan" /></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>montre/my-account/"><img src="<?= _URL_IMAGES; ?>../images/user-clagan.png" alt="user-clagan" class="user-clagan" /></a>
 				</div>
 				<div class="container-cart">
-					<a href="#"><img src="<?= _URL_IMAGES; ?>../images/cart-clagan.png" alt="cart-clagan" class="cart-clagan" /></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>montre/cart/">><img src="<?= _URL_IMAGES; ?>../images/cart-clagan.png" alt="cart-clagan" class="cart-clagan" /></a>
 					<span>
 						<?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
 					</span>

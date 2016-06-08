@@ -117,6 +117,9 @@ nav:false,
 autoplay:true,
 autoplayTimeout: 7000,
 })
+$('#woocommerce_layered_nav-2 > select > option:first-of-type').replaceWith('<option value selected="selected">H/F</option>');
+$('#woocommerce_product_categories-2 > select > option:first-of-type').replaceWith('<option value selected="selected">Marques</option>');
+$('#woocommerce_layered_nav-3 > select > option:first-of-type').replaceWith('<option value selected="selected">Mécanisme</option>');
 </script>
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
