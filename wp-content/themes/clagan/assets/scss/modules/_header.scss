@@ -73,15 +73,34 @@ header{
 
   }
   .container-search{
-    background:$blanc;
-    border-bottom:solid 2px $or;
-
+    background:$gris;
+    border-bottom:solid 2px $blanc;
+    .woocommerce-product-search-field{
+        border: 0px;
+    }
     .woocommerce-product-search{
+        border:0px;
       position:relative;
       input[type="submit"]{
-        position:absolute;
-        top:1px;
-        right:0px;
+          background:$or;
+          border: 0px;
+      position:absolute;
+      font-family: $lato;
+      font-size:12px;
+      font-weight: 700;
+      letter-spacing:1px;
+      text-transform: uppercase;
+      color:$blanc;
+      height:100%;
+      top:0px;
+      right:0px;
+      transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      &:hover{
+          -webkit-transition: all 0.4s ease-in-out;
+          background:$or-dark;
+
+      }
       }
       #woocommerce-product-search-field{
         margin:0px !important;

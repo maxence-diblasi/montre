@@ -15,7 +15,7 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-
+<div class="clear"></div>
 <div id="page" role="main">
 	<article class="main-content">
 		<h1>Page blog</h1>
@@ -40,7 +40,7 @@ get_header(); ?>
 		<?php } ?>
 
 	</article>
-	
+
 
 </div>
 

@@ -7,7 +7,7 @@
  */
 get_header(); ?>
 
-
+<?php if(is_product_category('montre')){ ?>
 <div class="row titre-h3-montre">
 	<div class="small-4 columns">
 		<span class="lineh3"></span>
@@ -19,20 +19,45 @@ get_header(); ?>
 		<span class="lineh3"></span>
 	</div>
 </div>
-<div class="row titre-filtre">
-	<div class="columns small-12 text-left">
-		<h2>Filtrer votre recherche</h2>
+<?php } ?>
+<?php if(is_product_category('nouveautes')){ ?>
+<div class="row titre-h3-montre">
+	<div class="small-4 columns">
+		<span class="lineh3"></span>
+	</div>
+	<div class="small-4 columns">
+		<h3 class="text-center">Nouveautés</h3>
+	</div>
+	<div class="small-4 columns">
+		<span class="lineh3"></span>
 	</div>
 </div>
-<div id="filtre-montres">
-	<?php if(is_product_category() && !is_product_category('nouveaute') && !is_product_category('bracelet')){ ?>
+<?php } ?>
+<?php if(is_product_category('bracelet')){ ?>
+<div class="row titre-h3-montre">
+	<div class="small-4 columns">
+		<span class="lineh3"></span>
+	</div>
+	<div class="small-4 columns">
+		<h3 class="text-center">Bracelet</h3>
+	</div>
+	<div class="small-4 columns">
+		<span class="lineh3"></span>
+	</div>
+</div>
+<?php } ?>
+	<?php if(is_product_category() && !is_product_category('nouveautes') && !is_product_category('bracelet')){ ?>
+	<div class="row titre-filtre">
+		<div class="columns small-12 text-left">
+			<h2>Filtrer votre recherche</h2>
+		</div>
+	</div>
+	<div id="filtre-montres">
 	<div class="row filtres-produits">
-
 		<?php dynamic_sidebar( 'filtres-montre' ); ?>
-
+	</div>
 	</div>
 	<?php }?>
-</div>
 <div class="small-12 large-12 row ariane">
 		<?php woocommerce_breadcrumb(); ?>
 </div>
