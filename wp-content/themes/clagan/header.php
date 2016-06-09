@@ -47,7 +47,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>montre/my-account/"><img src="<?= _URL_IMAGES; ?>../images/user-clagan.png" alt="user-clagan" class="user-clagan" /></a>
 				</div>
 				<div class="container-cart">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>montre/cart/">><img src="<?= _URL_IMAGES; ?>../images/cart-clagan.png" alt="cart-clagan" class="cart-clagan" /></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>montre/cart/"><img src="<?= _URL_IMAGES; ?>../images/cart-clagan.png" alt="cart-clagan" class="cart-clagan" /></a>
 					<span>
 						<?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?>
 					</span>

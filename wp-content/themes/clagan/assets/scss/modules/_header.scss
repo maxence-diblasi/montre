@@ -1,13 +1,9 @@
 #site-head{
   background:$blue-dark;
-
-
   .header-clagan{
-
     #mega-menu-top-bar-r{
     width: 100% !important;
       li{
-
         a{
             font-family: $lato !important;
             font-size:13px!important;
@@ -19,11 +15,7 @@
     }
     #mega-menu-wrap-top-bar-r .mega-menu-toggle #mega-toggle-block-1:after{
       content:"";
-
     }
-
-
-
     .container-logo{
       height:70px;
       background:$blue-dark;
@@ -47,6 +39,13 @@
       display:flex;
       align-items: center;
       justify-content: flex-end;
+      a{
+        transition: 0.4s ease-in-out;
+        &:hover{
+          transition: 0.4s ease-in-out;
+          
+        }
+      }
       .container-cart{
         display:inline-block;
         margin-left:20px;

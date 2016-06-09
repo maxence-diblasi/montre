@@ -1,53 +1,147 @@
 .status-publish{
+  .entry-title{
+      font-family:$lato;
+      font-size:30px;
+      font-weight:700;
+      text-transform:uppercase;
 
-    .entry-content{
-        .woocommerce{
-            .woocommerce-error{
+  }
+  .entry-content{
+      .woocommerce{
+          .woocommerce-error{
+              font-family:$lato;
+              font-size:16px;
+              font-weight:400;
+              color:$rouge;
+              background:rgba(213, 43 ,30, 0.2);
+              border-top:0px;
+          }
+          form{
+              border-radius: none;
+              table{
+                  thead{
+                      background:$blue-dark;
+                      color:$blanc;
+
+                  }
+                  tbody{
+                      .cart_item{
+                          background:$blanc!important;
+                          .product-name{
+                              a{
+                                  font-family:$lato !important;
+                                  color:$or-dark;
+                                  transition: 0.4s;
+                                  &:hover{
+                                      color:$or;
+                                      transition: 0.4s;
+                                  }
+
+                              }
+                          }
+                      }
+                      tr{
+                          .coupon{
+                              .button{
+
+                              }
+                          }
+                      }
+
+                  }
+              }
+
+          }
+          .cart-collaterals{
+            .cart_totals{
+              h2{
                 font-family:$lato;
-                font-size:16px;
-                font-weight:400;
-                color:$rouge;
-                background:rgba(213, 43 ,30, 0.2);
-                border-top:0px;
-            }
-            form{
-                border-radius: none;
-                table{
-                    thead{
-                        background:$blue-dark;
-                        color:$blanc;
+                font-size:20px;
+                font-weight:700;
+                text-transform:uppercase;
+                margin-top:30px;
+
+              }
+              .shop_table{
+                tbody{
+                  tr{
+                    background:$blanc;
+                    th{
 
                     }
-                    tbody{
-                        .cart_item{
-                            background:$blanc!important;
-                            .product-name{
-                                a{
-                                    font-family:$lato !important;
-                                    color:$or-dark;
-                                    transition: 0.4s;
-                                    &:hover{
-                                        color:$or;
-                                    }
-
-                                }
+                    td{
+                      .woocommerce-shipping-calculator{
+                        p{
+                          a{
+                            color:$or-dark;
+                            transition: 0.4s;
+                            &:hover{
+                              color:$or;
+                              transition: 0.4s;
                             }
+                          }
                         }
-                        tr{
-                            .coupon{
-                                .button{
-
-                                }
-                            }
-                        }
-
+                      }
                     }
+                  }
                 }
-
+              }
+              .wc-proceed-to-checkout{
+                .checkout-button{
+                  background:$blue-dark;
+                  font-family: $lato;
+                  font-size: 20px;
+                  text-transform:uppercase;
+                  letter-spacing:2px;
+                  color:$blanc;
+                  border-radius:0px;
+                  border:2px solid  $blue-dark;
+                  margin-bottom:100px;
+                  -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+                  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+                  -moz-osx-font-smoothing: grayscale;
+                  position: relative;
+                  -webkit-transition-property: color;
+                  transition-property: color;
+                  -webkit-transition-duration: 0.3s;
+                  transition-duration: 0.3s;
+                }
+                .checkout-button:before{
+                  content: "";
+                  position: absolute;
+                  z-index: -1;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background: $blanc;
+                  -webkit-transform: scaleX(0);
+                  transform: scaleX(0);
+                  -webkit-transform-origin: 0 50%;
+                  transform-origin: 0 50%;
+                  -webkit-transition-property: transform;
+                  transition-property: transform;
+                  -webkit-transition-duration: 0.3s;
+                  transition-duration: 0.3s;
+                  -webkit-transition-timing-function: ease-out;
+                  transition-timing-function: ease-out;
+                }
+                .checkout-button:hover, .checkout-button:focus, .checkout-button:active {
+                  color: $blue-dark;
+                  background:$blue-dark;
+                }
+                .checkout-button:hover:before, .checkout-button:focus:before, .checkout-button:active:before {
+                  -webkit-transform: scaleX(1);
+                  transform: scaleX(1);
+                }
+              }
             }
-        }
-
-    }
+          }
+      }
+  }
 }
 
 #page .main-content{

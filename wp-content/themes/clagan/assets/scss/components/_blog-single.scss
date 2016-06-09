@@ -1,0 +1,17 @@
+#single-post{
+  article{
+    margin-top:100px;
+    margin-bottom:100px;
+    width:100% !important;
+    .entry-content{
+      width:100% !important;
+      .attachment-post-thumbnail{
+        margin-top:15px;
+        margin-bottom:30px;
+      }
+    }
+    #respond{
+      margin-top:70px;
+    }
+  }
+}

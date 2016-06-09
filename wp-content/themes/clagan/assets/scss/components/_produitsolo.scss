@@ -32,10 +32,10 @@
          color:$rouge;
          background:rgba(213, 43 ,30, 0.2);
          border-top:0px;
-
      }
-
     .product{
+      padding-top:100px;
+      padding-bottom:100px;
         .images{
         }
         .entry-summary{
@@ -108,7 +108,6 @@
             text-transform:uppercase;
             margin-bottom:15px;
           }
-
             .amount{
                 display:block;
                 font-family:$lato;
@@ -137,15 +136,15 @@
                 vertical-align: middle;
                 -webkit-transform: translateZ(0);
                 transform: translateZ(0);
-                  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-                  -webkit-backface-visibility: hidden;
-                  backface-visibility: hidden;
-                  -moz-osx-font-smoothing: grayscale;
-                  position: relative;
-                  -webkit-transition-property: color;
-                  transition-property: color;
-                  -webkit-transition-duration: 0.3s;
-                  transition-duration: 0.3s;
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -moz-osx-font-smoothing: grayscale;
+                position: relative;
+                -webkit-transition-property: color;
+                transition-property: color;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
             }
             .button:before {
               content: "";
@@ -176,6 +175,7 @@
               transform: scaleX(1);
             }
             .contner-caracteristique{
+              margin-top:30px;
               .first-table{
                 padding:0px;
                 margin:0;
@@ -213,20 +213,17 @@
                 tr{
                   background:$blanc!important;
                   border: solid 2px #eeeeee;
-
                   th{
                     background:none;
                     border:none;
 
                     p{
                       background:none;
-
                     }
                   }
                   td{
                     background:none;
                     border:none;
-
                     p{
 
                     }
@@ -236,7 +233,7 @@
             }
         }
         .related{
-            margin-top:30px;
+            margin-top:100px;
             h2{
                 font-family:$lato;
                 font-size:20px;
