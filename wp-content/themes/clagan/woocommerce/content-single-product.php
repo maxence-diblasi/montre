@@ -69,7 +69,7 @@ global $product;
 			remove_action('woocommerce_single_product_summary', 'woocommerce_product_description_tab', 60);
 
 		?>
-
+		<div class="payable"><p>Payable en 7x sans frais</p></div>
 		<div class="reassurance row">
 			<div class="assurance assurance-1">
 				<img src="<?= _URL_IMAGES; ?>../images/authenticity.png" alt="" />

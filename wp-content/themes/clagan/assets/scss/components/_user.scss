@@ -1,0 +1,78 @@
+.type-page{
+  margin-top:100px;
+  margin-bottom:120px;
+  .myaccount_user{
+    margin-bottom:50px;
+    a{
+      color:$or-dark;
+      transition: 0.4s ease all;
+      &:hover{
+        color:$or;
+        transition: 0.4s ease all;
+        opacity: 0.6;
+      }
+    }
+  }
+  .myaccount_address{
+    margin-bottom:50px;
+  }
+  .addresses{
+    .address{
+      border:solid 2px $or;
+      padding: 20px;
+      margin-top:30px;
+      .edit{
+        padding:10px;
+        margin: 0 auto;
+        border:solid 2px $blue-dark;
+        font-family: $lato;
+        font-size: 16px;
+        font-weight:700;
+        color:$blue-dark;
+        text-align:center;
+        text-transform:uppercase;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+      }
+      .edit:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $blue-dark;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      .edit:hover, .edit:focus, .edit:active {
+        color: $blanc;
+      }
+      .edit:hover:before, .edit:focus:before, .edit:active:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+
+    }
+  }
+}

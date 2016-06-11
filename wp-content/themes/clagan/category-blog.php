@@ -16,9 +16,22 @@
  */
 get_header(); ?>
 <div class="clear"></div>
+<div class="blog-title">
+	<div class="row titre-h3">
+		<div class="small-4 columns">
+			<span class="lineh3"></span>
+		</div>
+		<div class="small-4 columns">
+			<h3 class="text-center">Blog</h3>
+		</div>
+		<div class="small-4 columns">
+			<span class="lineh3"></span>
+		</div>
+	</div>
+</div>
+
 <div id="page" role="main">
 	<article class="main-content">
-		<h1>Page blog</h1>
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>

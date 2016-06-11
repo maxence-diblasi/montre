@@ -38,13 +38,13 @@ get_header(); ?>
 <div class="contner-meilleur-vente">
 	<div class="row meilleur-vente">
 		<div class="row titre-h3">
-			<div class="small-4 columns">
+			<div class="small-3 columns">
 				<span class="lineh3"></span>
 			</div>
-			<div class="small-4 columns">
-				<h3 class="text-center">best-sellers</h3>
+			<div class="small-6 columns">
+				<h3 class="text-center">Séléction clagan</h3>
 			</div>
-			<div class="small-4 columns">
+			<div class="small-3 columns">
 				<span class="lineh3"></span>
 			</div>
 		</div>
@@ -74,6 +74,7 @@ get_header(); ?>
 					'posts_per_page' => 3,
 					'meta_key' => 'total_sales',
 					'orderby' => 'meta_value_num',
+					'product_cat' => 'montre',
 					);
 					$loop = new WP_Query( $args );
 					if ( $loop->have_posts() ) {
@@ -151,22 +152,38 @@ get_header(); ?>
 				<span class="lineh3"></span>
 			</div>
 		</div>
-		<div class="small-12 medium-6 text-center columns">
-			<div class="image-block">
-				<img src="<?= _URL_IMAGES; ?>../images/montreensemble.png" alt="" />
-			</div>
-			<h6 class="">une collection de montre vintage de 1970</h6>
+		<?php
+					$args = array(
+					'post_type' => 'post',
+					'posts_per_page' => 2,
+					);
+					$loop = new WP_Query( $args );
+					if ( $loop->have_posts() ) {
+					while ( $loop->have_posts() ) : $loop->the_post();
+					?><div class="small-12 medium-6 text-center article-du-blog columns">
+						<div class="image-block">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<h6 class=""><?php the_title(); ?></h6>
 
-			<a href="#" class="hvr-sweep-to-right">Lire la suite</a>
-		</div>
-		<div class="small-12 medium-6 text-center columns">
+						<a href="<?php the_permalink(); ?>" class="hvr-sweep-to-right">Lire la suite</a>
+					</div>
+				<?php
+					endwhile;
+					} else {
+					echo __( 'No products found' );
+					}
+					wp_reset_query();
+				?>
+
+		<!--<div class="small-12 medium-6 text-center columns">
 			<div class="image-block">
-				<img src="<?= _URL_IMAGES; ?>../images/montreensemble.png" alt="" />
+				<img src="<?php //_URL_IMAGES; ?>../images/montreensemble.png" alt="" />
 			</div>
 			<h6 class="">DÉCOUVREZ LA ROLEX vector 70</h6>
 
 			<a href="#" class="hvr-sweep-to-right">Lire la suite</a>
-		</div>
+		</div>-->
 
 	</section>
 </div>

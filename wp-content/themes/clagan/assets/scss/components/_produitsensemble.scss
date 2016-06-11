@@ -1,3 +1,20 @@
+.woocommerce-pagination{
+  margin-bottom:100px;
+  .page-numbers{
+    li{
+      .current{
+        color:$blanc !important;
+        background:$blue-dark !important;
+
+      }
+      .page-numbers{
+        color:$blue-dark;
+
+      }
+    }
+  }
+
+}
 p.woocommerce-result-count{
     display:none;
 }
@@ -8,8 +25,7 @@ p.woocommerce-result-count{
     padding-top:100px;
 }
 .products{
-    margin-bottom:100px !important;
-
+    margin-bottom:50px !important;
     .type-product{
         a[rel="tag"]{
             font-family: $lato;
@@ -43,6 +59,7 @@ p.woocommerce-result-count{
             line-height:31px;
             margin: 0 auto;
             margin-top:20px;
+            margin-bottom:40px;
             text-align:center;
             border:solid 2px $gris-dark;
             font-family: $lato;

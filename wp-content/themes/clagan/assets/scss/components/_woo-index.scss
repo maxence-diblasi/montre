@@ -28,16 +28,22 @@
 .product{
     overflow: hidden;
 }
-.wp-post-image{
-    transition: 0.4s ease all;
-    overflow: hidden;
-    &:hover{
-        transition: 0.4s ease all;
-
-    }
+.img-container{
+  height: 257px;
+  overflow: hidden;
+  .wp-post-image{
+      transition: 0.4s ease all;
+      &:hover{
+          transition: 0.4s ease all;
+      }
+  }
 }
+
+
+
 .contner-lesmarques{
-    background:url(../images/lac-alsace.png);
+    background:url(../images/lac-alsace.png) center center no-repeat;
+    background-size: cover;
     .les_marques{
         padding-top:200px;
         padding-bottom:200px;
@@ -116,16 +122,16 @@
             margin-top:25px;
         }
             .hvr-sweep-to-right {
-                height:45px;
-                width:180px;
-                line-height:41px;
-                margin: 0 auto;
-                border:solid 2px $gris-dark;
-                font-family: $lato;
-                font-size: 16px;
-                font-weight:700;
-                color:$gris-dark;
-                text-transform:uppercase;
+              height:45px;
+              width:180px;
+              line-height:41px;
+              margin: 0 auto;
+              border:solid 2px $gris-dark;
+              font-family: $lato;
+              font-size: 16px;
+              font-weight:700;
+              color:$gris-dark;
+              text-transform:uppercase;
               display: inline-block;
               vertical-align: middle;
               -webkit-transform: translateZ(0);

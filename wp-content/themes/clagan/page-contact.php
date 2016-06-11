@@ -25,9 +25,7 @@ get_header(); ?>
         <span class="lineh3"></span>
       </div>
     </div>
-
     <div class="columns large-6 small-12 contner-infos">
-
         <div class="infos-titre">
           <img src="<?= _URL_IMAGES; ?>../images/cartouche-logo.png" alt="" />
           <div class="titre-center">
@@ -37,9 +35,7 @@ get_header(); ?>
               <h6><?php _e('Sorry, no posts matched your criteria.'); ?></h6>
             <?php endif; ?>
             <span class="st"></span>
-
           </div>
-
           <div class="infos-text">
             <p>
               <strong><i class="fa fa-envelope" aria-hidden="true"></i>mail :</strong>  clagan@service-client.com
@@ -50,19 +46,13 @@ get_header(); ?>
             <p>
               <strong><i class="fa fa-phone" aria-hidden="true"></i>téléphone :</strong>  07 43 78 90 36
             </p>
-
           </div>
-
         </div>
-
     </div>
-
     <div class="columns large-6 small-12 contner-form" id="contner-form">
         <?php echo do_shortcode('[contact-form-7 id="15" title="Contact form 1"]') ?>
     </div>
-
   </div>
-
 </section>
 
 

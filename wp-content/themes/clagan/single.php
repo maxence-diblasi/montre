@@ -7,12 +7,12 @@
  */
 
 get_header(); ?>
-
-<div id="single-post" role="main">
+<div class="clear"></div>
+<div class="row blog-article-single">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+	<div class="small-12 medium-12 large-8 large-offset-2 blog-article-single-container columns">
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php foundationpress_entry_meta(); ?>
@@ -37,7 +37,8 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
 	</article>
 <?php endwhile;?>
-
+</div>
+</div>
 <?php do_action( 'foundationpress_after_content' ); ?>
 </div>
 <?php get_footer();

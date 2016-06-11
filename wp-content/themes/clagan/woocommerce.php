@@ -6,9 +6,9 @@
  * @since FoundationPress 1.0.0
  */
 get_header(); ?>
-
+<div class="clear"></div>
 <?php if(is_product_category('montre')){ ?>
-<div class="row titre-h3-montre">
+<div class="row titre-h3-montres">
 	<div class="small-4 columns">
 		<span class="lineh3"></span>
 	</div>
@@ -21,7 +21,7 @@ get_header(); ?>
 </div>
 <?php } ?>
 <?php if(is_product_category('nouveautes')){ ?>
-<div class="row titre-h3-montre">
+<div class="row titre-h3-nouveautes">
 	<div class="small-4 columns">
 		<span class="lineh3"></span>
 	</div>
@@ -34,19 +34,19 @@ get_header(); ?>
 </div>
 <?php } ?>
 <?php if(is_product_category('bracelet')){ ?>
-<div class="row titre-h3-montre">
+<div class="row titre-h3-bracelets">
 	<div class="small-4 columns">
 		<span class="lineh3"></span>
 	</div>
 	<div class="small-4 columns">
-		<h3 class="text-center">Bracelet</h3>
+		<h3 class="text-center">Bracelets</h3>
 	</div>
 	<div class="small-4 columns">
 		<span class="lineh3"></span>
 	</div>
 </div>
 <?php } ?>
-	<?php if(is_product_category() && !is_product_category('nouveautes') && !is_product_category('bracelet')){ ?>
+	<?php if(is_product_category('') && !is_product_category('nouveautes') && !is_product_category('bracelet')){ ?>
 	<div class="row titre-filtre">
 		<div class="columns small-12 text-left">
 			<h2>Filtrer votre recherche</h2>

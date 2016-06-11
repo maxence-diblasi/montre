@@ -66,13 +66,13 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 */
 	//do_action( 'woocommerce_before_shop_loop_item_title' );
 
-
+	?><div class="img-container"><?php
 	if ( has_post_thumbnail() ) {
 		echo get_the_post_thumbnail( $post->ID, $size );
 	} elseif ( wc_placeholder_img_src() ) {
 		echo wc_placeholder_img( $size );
 	}
-
+	?></div><?php
 	echo $product->get_categories();
 
 	/**

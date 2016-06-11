@@ -83,15 +83,15 @@
 </div><!-- Close off-canvas content wrapper -->
 <?php endif; ?>
 
-<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/components/owl.carousel/dist/owl.carousel.js"></script>
 <script type="text/javascript">
 $('.block-img').css('height', $('.block-txt').outerHeight())
 $('.text-contner').css('height', $('.img-contner').height())
 
 $('.contner-infos').css('height', $('.contner-form').outerHeight())
 
-$('.block-img img').css('max-height', $('.block-txt').outerHeight() - 100)
-$('.customslider').css('height', $( window ).height() - $('.top-bar-section').height())
+/*$('.block-img img').css('max-height', $('.block-txt').outerHeight() - 100)
+$('.customslider').css('height', $( window ).height() - $('#site-head').height())*/
 $('.img-mini').each(function(){
 	$(this).css('height', $('.img-mini').width())
 })
@@ -115,12 +115,14 @@ loop:true,
 items:1,
 nav:false,
 autoplay:true,
-autoplayTimeout: 7000,
+autoplayTimeout:7000,
+autoplayHoverPause:false,
 })
 $('#woocommerce_layered_nav-2 > select > option:first-of-type').replaceWith('<option value selected="selected">H/F</option>');
-$('#woocommerce_product_categories-2 > select > option:first-of-type').replaceWith('<option value selected="selected">Marques</option>');
+$('#woocommerce_product_categories-2 > select > option:first-of-type').replaceWith('');
 $('#woocommerce_layered_nav-3 > select > option:first-of-type').replaceWith('<option value selected="selected">Mécanisme</option>');
 $('#woocommerce_layered_nav-4 > select > option:first-of-type').replaceWith('<option value selected="selected">Bracelet</option>');
+$('#woocommerce_product_categories-2 > select > option[value="bracelet"]').replaceWith('');
 </script>
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>

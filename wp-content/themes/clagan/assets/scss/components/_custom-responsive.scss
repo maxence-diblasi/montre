@@ -5,11 +5,45 @@
   display:none;
 }
 @media screen and (max-width:1024px){
+  .img-container{
+    // ICI TAILLE IMAGE DANS CATEGORIE PRODUIT WOOCOMMERCE 
+  }
+  .container-search{
+    display:none;
+  }
+  #mega-menu-top-bar-r{
+  background:$blue-dark !important;
+  }
+  .contner-menu{
+    background:$blue-dark !important;
+  }
   .desktop{
     display:none;
   }
   .mobile{
     display:block;
+    .container-compte{
+      .container-search-mobile{
+        margin-right:15px;
+        .search-ic{
+          .fa-search{
+            color:$blue-dark;
+            width:36px;
+            height:35px;
+            background:$gris;
+            font-size:18px;
+            line-height: 35px;
+            text-align:center;
+            border-radius:35px;
+            transition: 0.4s ease all;
+            &:hover{
+              transition: 0.4s ease all;
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
     .container-menu{
       #mega-menu-wrap-top-bar-r{
         width:100% !important;

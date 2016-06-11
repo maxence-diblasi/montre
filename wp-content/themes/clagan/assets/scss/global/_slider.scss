@@ -8,7 +8,10 @@ html, body{
     background-size:cover;
     position:relative;
     display:flex;
-
+    align-items: center;
+    justify-content: center;
+    height: 92vh;
+    overflow: hidden;
     .in{
         margin:auto;
         width:100vw;
@@ -40,7 +43,7 @@ html, body{
                 color:$blanc;
                 border-bottom:solid 1px $or;
                 padding-bottom:10px;
-                margin-bottom:35px;
+                margin-bottom:25px;
                 width:105px;
             }
             h2{
@@ -56,7 +59,7 @@ html, body{
                 font-size: 24px;
                 text-transform: uppercase;
                 color:$blanc;
-                margin-bottom:35px;
+                margin-bottom:20px;
             }
             .description{
                 font-family: $lato;
@@ -65,24 +68,60 @@ html, body{
                 line-height:27px;
                 color:#ffffff;
                 padding-right:30px;
+                margin-bottom:30px;
             }
             a{
-                text-decoration:none;
-                text-align: center;
-                display:block;
-                width:250px;
-                font-family: $lato;
-                font-size:16px;
-                font-weight:700;
-                color:$blanc;
-                text-transform:uppercase;
-                border: solid 2px $blanc;
-                padding:10px;
-                margin-top:50px;
-                transition:0.5s;
-                &:hover{
-                    background:$or;
-                }
+              height:45px;
+              width:180px;
+              line-height:41px;
+              margin: 0 auto;
+              border:solid 2px $blanc;
+              font-family: $lato;
+              font-size: 16px;
+              font-weight:700;
+              color:$blanc;
+              text-align:center;
+              text-transform:uppercase;
+              display: inline-block;
+              vertical-align: middle;
+              -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -moz-osx-font-smoothing: grayscale;
+              position: relative;
+              -webkit-transition-property: color;
+              transition-property: color;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+            }
+            a:before {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: $blanc;
+              -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+              -webkit-transform-origin: 0 50%;
+              transform-origin: 0 50%;
+              -webkit-transition-property: transform;
+              transition-property: transform;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+            }
+            a:hover, a:focus, a:active {
+              color: $noir;
+            }
+            a:hover:before, a:focus:before, a:active:before {
+              -webkit-transform: scaleX(1);
+              transform: scaleX(1);
             }
 
         }

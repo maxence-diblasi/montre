@@ -1,17 +1,26 @@
-#single-post{
-  article{
-    margin-top:100px;
-    margin-bottom:100px;
-    width:100% !important;
+.blog-article-single{
+  .blog-article-single-container{
+    margin-top:80px;
+    margin-bottom:130px;
+    header{
+      .entry-title{
+        font-family:$lato;
+        font-size: 30px;
+        font-weight:700;
+        letter-spacing:3px;
+        text-transform:uppercase;
+        color: $blue-dark;
+      }
+    }
     .entry-content{
-      width:100% !important;
+      width:100%!important;
+      img{
+        width:100%;
+      }
       .attachment-post-thumbnail{
         margin-top:15px;
         margin-bottom:30px;
       }
-    }
-    #respond{
-      margin-top:70px;
     }
   }
 }

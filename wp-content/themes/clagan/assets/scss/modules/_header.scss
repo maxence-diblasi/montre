@@ -1,5 +1,6 @@
 #site-head{
   background:$blue-dark;
+  height: 8vh;
   .header-clagan{
     #mega-menu-top-bar-r{
     width: 100% !important;
@@ -24,6 +25,11 @@
       .logo{
           width:132px;
           height:24px;
+          transition: 0.4s ease all;
+          &:hover{
+            transition: 0.4s ease all;
+            opacity: 0.6;
+          }
       }
     }
     .container-menu{
@@ -40,15 +46,24 @@
       align-items: center;
       justify-content: flex-end;
       a{
-        transition: 0.4s ease-in-out;
-        &:hover{
-          transition: 0.4s ease-in-out;
-          
+        img{
+          transition: 0.4s ease all;
         }
+        &:hover{
+          img{
+            transition: 0.4s ease all;
+            opacity: 0.6;
+          }
+
+        }
+      }
+      .container-contact{
+        display:inline-block;
+
       }
       .container-cart{
         display:inline-block;
-        margin-left:20px;
+        margin-left:15px;
         position:relative;
         span{
           position:absolute;
@@ -62,6 +77,8 @@
           top:-8px;
           right:-8px;
           font-family:$lato;
+          font-weight:700;
+          color:$blue-dark;
         }
       }
       .container-user{
@@ -73,12 +90,11 @@
   }
   .container-search{
     background:$gris;
-    border-bottom:solid 2px $blanc;
-    .woocommerce-product-search-field{
+    #woocommerce-product-search-field{
         border: 0px;
+        border-bottom: solid 1px $gris;
     }
     .woocommerce-product-search{
-        border:0px;
       position:relative;
       input[type="submit"]{
           background:$or;
