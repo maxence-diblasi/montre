@@ -119,28 +119,28 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="small-12 medium-4 large-2 text-center columns">
-			<img src="<?= _URL_IMAGES; ?>../images/chanel2.png" alt="" />
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>categorie-produit/montre/chanel/"><img src="<?= _URL_IMAGES; ?>../images/chanel2.png" alt="" /></a>
 		</div>
 		<div class="small-12 medium-4 large-2 text-center columns">
-			<img src="<?= _URL_IMAGES; ?>../images/bellross2.png" alt="" />
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>categorie-produit/montre/breitling/"><img src="<?= _URL_IMAGES; ?>../images/breitling2.png" alt="" /></a>
 		</div>
 		<div class="small-12 medium-4 large-2 text-center columns">
-			<img src="<?= _URL_IMAGES; ?>../images/omega2.png" alt="" />
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>categorie-produit/montre/omega/"><img src="<?= _URL_IMAGES; ?>../images/omega2.png" alt="" /></a>
 		</div>
 		<div class="small-12 medium-4 large-2 text-center columns">
-			<img src="<?= _URL_IMAGES; ?>../images/rolex2.png" alt="" />
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>categorie-produit/montre/rolex/"><img src="<?= _URL_IMAGES; ?>../images/rolex2.png" alt="" /></a>
 		</div>
 		<div class="small-12 medium-4 large-2 text-center columns">
-			<img src="<?= _URL_IMAGES; ?>../images/cartier2.png" alt="" />
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>categorie-produit/montre/bell-ross/"><img src="<?= _URL_IMAGES; ?>../images/bellross2.png" alt="" /></a>
 		</div>
 		<div class="small-12 medium-4 large-2 text-center columns">
-			<img src="<?= _URL_IMAGES; ?>../images/chopard2.png" alt="" />
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>categorie-produit/montre/cartier/"><img src="<?= _URL_IMAGES; ?>../images/cartier2.png" alt="" /></a>
 		</div>
 	</section>
 </div>
 
 <div class="contner-blog">
-	<section class="blog row">
+	<section class="blog-content row">
 		<div class="row titre-h3">
 			<div class="small-4 columns">
 				<span class="lineh3"></span>

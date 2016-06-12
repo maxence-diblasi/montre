@@ -5,8 +5,125 @@
   display:none;
 }
 @media screen and (max-width:1024px){
+  .about-full .about-contner #ticket-contner .text-contner{
+    height: inherit !important;
+    img{
+      &.about-montre{
+        bottom: -220px !important;
+      }
+    }
+  }
+  .products{
+    .product{
+      width: 100% !important;
+      .img-container{
+        height: inherit !important;
+      }
+    }
+  }
+  .titre-h3{
+    div:first-child{
+      display: none;
+    }
+    div:nth-child(2){
+      width: 100% !important;
+      padding: 0 20px !important;
+    }
+    div:last-child{
+      display:none;
+    }
+  }
+  .contner-meilleur-vente{
+    padding-top: 50px;
+  }
+  .les_marques{
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+    div{
+      a{
+        img{
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+  .titre-h3-montres{
+    div:first-child{
+      display: none;
+    }
+    div:nth-child(2){
+      width: 100% !important;
+      padding: 0 20px !important;
+    }
+    div:last-child{
+      display:none;
+    }
+  }
+  .titre-h3-bracelets{
+    div:first-child{
+      display: none;
+    }
+    div:nth-child(2){
+      width: 100% !important;
+      padding: 0 20px !important;
+    }
+    div:last-child{
+      display:none;
+    }
+  }
+  .article-du-blog{
+    margin-bottom: 50px !important;
+  }
+  .blog-content{
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    .image-block{
+      height: 200px !important;
+    }
+  }
+  #assurance{
+    article{
+      margin-bottom: 50px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:last-of-type{
+        margin-bottom: 0 !important;
+      }
+      div{
+        &:last-child{
+          margin-bottom: 0 !important;
+        }
+      }
+
+    }
+    .align-content{
+      p{
+        margin: 0 0 0 20px !important;
+      }
+    }
+  }
+body{
+  margin: 0 !important;
+  padding: 0 !important;
+}
   .img-container{
-    // ICI TAILLE IMAGE DANS CATEGORIE PRODUIT WOOCOMMERCE 
+    // ICI TAILLE IMAGE DANS CATEGORIE PRODUIT WOOCOMMERCE
+  }
+  .customslider{
+    padding: 0 !important;
+    height: auto !important;
+    .owl-dots{
+      margin-top: 10px !important;
+    }
+    .item{
+      .block-txt{
+        padding: 20px !important;
+        .description{
+
+        }
+      }
+    }
   }
   .container-search{
     display:none;

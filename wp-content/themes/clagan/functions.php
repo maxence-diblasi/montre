@@ -111,7 +111,6 @@ add_action( 'woocommerce_after_shop_loop_item', 'action_woocommerce_after_shop_l
 
 
 
-
 function textdomain_register_sidebars() {
 
 

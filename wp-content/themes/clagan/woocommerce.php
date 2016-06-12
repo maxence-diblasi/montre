@@ -7,6 +7,9 @@
  */
 get_header(); ?>
 <div class="clear"></div>
+<?php if(!is_product_category('montre') && !is_product_category('nouveautes') && !is_product_category('bracelet')){
+?> <div class="espace-top" style="padding-top: 100px;"></div>
+<?php } ?>
 <?php if(is_product_category('montre')){ ?>
 <div class="row titre-h3-montres">
 	<div class="small-4 columns">

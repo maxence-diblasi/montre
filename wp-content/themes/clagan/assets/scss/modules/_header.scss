@@ -4,15 +4,59 @@
   .header-clagan{
     #mega-menu-top-bar-r{
     width: 100% !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
       li{
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        //background: url(../images/fixe/menu-icon-invi.png) bottom center no-repeat;
+        &:hover{
+          cursor: pointer;
+          a{
+            color: $blanc !important;
+            transition: 0.4s ease all;
+            cursor: pointer !important;
+          }
+        }
+        &.mega-current-product-ancestor{
+          background: url(../images/fixe/hover-menu.png) bottom center no-repeat;
+          a{
+            color: #fff !important;
+            cursor: pointer !important;
+          }
+        }
+        &.mega-current-menu-item{
+          background: url(../images/fixe/hover-menu.png) bottom center no-repeat;
+          a{
+            color: #fff !important;
+            cursor: pointer !important;
+          }
+        }
+        &.mega-current-product_cat-ancestor{
+          background: url(../images/fixe/hover-menu.png) bottom center no-repeat;
+          a{
+            color: #fff !important;
+            cursor: pointer !important;
+          }
+        }
         a{
             font-family: $lato !important;
             font-size:13px!important;
             font-weight:700 !important;
             letter-spacing: 3px !important;
             text-transform: uppercase!important;
+            cursor: pointer;
+            color: #aaaaaa !important;
+            transition: 0.4s ease all;
         }
       }
+    }
+    #mega-menu-wrap-top-bar-r{
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
     #mega-menu-wrap-top-bar-r .mega-menu-toggle #mega-toggle-block-1:after{
       content:"";
@@ -122,6 +166,33 @@
       }
       .screen-reader-text{
         display:none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  #mega-menu-top-bar-r{
+
+    li{
+
+      //background: url(../images/fixe/menu-icon-invi.png) bottom center no-repeat;
+      &:hover{
+        cursor: pointer;
+        background: none !important;
+      }
+      &.mega-current-product-ancestor{
+        background: none !important;
+      }
+      &.mega-current-menu-item{
+        background: none !important;
+      }
+      a{
+          font-family: $lato !important;
+          font-size:13px!important;
+          font-weight:700 !important;
+          letter-spacing: 3px !important;
+          text-transform: uppercase!important;
       }
     }
   }
